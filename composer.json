@@ -1,0 +1,57 @@
+{
+    "name": "rashed50702/laravel-bangla-pdf",
+    "description": "Generate Bangla (Bengali) + English PDFs in Laravel with mPDF: correct conjunct shaping, automatic font switching, Bangla digits, Taka formatting and amount in words.",
+    "keywords": ["laravel", "pdf", "mpdf", "bangla", "bengali", "bangladesh", "taka", "unicode", "solaimanlipi"],
+    "homepage": "https://github.com/rashed50702/laravel-bangla-pdf",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Md. Rashedul Hasan",
+            "email": "rashed50702@gmail.com",
+            "homepage": "https://rashed.cloud",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-mbstring": "*",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/view": "^11.0|^12.0|^13.0",
+        "illuminate/console": "^11.0|^12.0|^13.0",
+        "mpdf/mpdf": "^8.2",
+        "symfony/http-foundation": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.5|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rashed50702\\BanglaPdf\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rashed50702\\BanglaPdf\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rashed50702\\BanglaPdf\\BanglaPdfServiceProvider"
+            ],
+            "aliases": {
+                "BanglaPdf": "Rashed50702\\BanglaPdf\\Facades\\BanglaPdf"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
