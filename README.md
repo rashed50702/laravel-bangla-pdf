@@ -21,7 +21,7 @@ Generate **Bangla (Bengali) + English PDFs** in Laravel with [mPDF](https://mpdf
 ## Requirements
 
 - PHP 8.3+
-- Laravel 11, 12 or 13
+- Laravel 12 or 13
 - `ext-mbstring`, `ext-gd`
 
 ## Installation
