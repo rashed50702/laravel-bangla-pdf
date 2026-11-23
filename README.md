@@ -131,14 +131,14 @@ For a more familiar look and real bold, use SolaimanLipi, Kalpurush or Nikosh:
 1. Put the `.ttf` files in `storage/fonts/bangla-pdf` (or change `font_path`).
 2. Register them in `config/bangla-pdf.php` and choose the Bangla font:
 
-```php
-'bengali_font' => 'solaimanlipi',
-'bengali_scale' => 1.0,
+   ```php
+   'bengali_font' => 'solaimanlipi',
+   'bengali_scale' => 1.0,
 
-'fonts' => [
-    'solaimanlipi' => ['R' => 'SolaimanLipi.ttf', 'B' => 'SolaimanLipi_Bold.ttf'],
-],
-```
+   'fonts' => [
+       'solaimanlipi' => ['R' => 'SolaimanLipi.ttf', 'B' => 'SolaimanLipi_Bold.ttf'],
+   ],
+   ```
 
 3. Run `php artisan bangla-pdf:doctor` to confirm mPDF can read it.
 
