@@ -179,6 +179,13 @@ The default stylesheet uses light table colours that print cleanly without wasti
 composer test
 ```
 
+Run a single suite with `vendor/bin/phpunit --testsuite Unit`.
+
+## Credits
+
+- [Md. Rashedul Hasan](https://github.com/rashed50702)
+- Built on [mPDF](https://github.com/mpdf/mpdf)
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
