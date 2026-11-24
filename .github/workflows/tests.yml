@@ -2,7 +2,13 @@ name: Tests
 
 on:
   push:
+    branches: [main]
+    tags: ['v*']
   pull_request:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   tests:
@@ -28,6 +34,15 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: mbstring, gd
           coverage: none
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/composer/files
+          key: composer-${{ matrix.php }}-${{ matrix.laravel }}-${{ hashFiles('composer.json') }}
+          restore-keys: composer-${{ matrix.php }}-${{ matrix.laravel }}-
 
       - name: Install dependencies
         run: |
